@@ -5,6 +5,8 @@ from UI.Widgets.SlidersWidget import SlidersWidget
 from UI.Views.FreqGraph import FreqGraph
 from UI.Views.SpectrogramGraph import SpectrogramGraph
 
+import os
+
 class AppUi:
     def __init__(self):
         # state = StateManagement()
@@ -12,7 +14,7 @@ class AppUi:
         st.set_page_config(page_title='Frequalizer')
 
         # styling injection
-        with open("./styles/style.css") as source:
+        with open(os.path.join(os.path.dirname(__file__), '../Styles/style.css')) as source:
             style = source.read()
         st.markdown(f"""
         <style>
