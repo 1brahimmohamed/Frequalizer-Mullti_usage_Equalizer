@@ -33,7 +33,4 @@ class AppUi:
             FreqGraph()
             SpectrogramGraph()
 
-        columns3 = st.columns([0.1, 2, 0.1])
-        
-        with columns3[1]:
-            SlidersWidget()
+        SlidersWidget()
