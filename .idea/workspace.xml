@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="de475fef-8d8f-428d-8884-19ab4ca3388a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Equalizer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Equalizer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/assets/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/componenets/Graph/Graph.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/componenets/Graph/Graph.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/componenets/Header/Header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/componenets/Header/Header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/componenets/Slider/.sass-cache/44c1eb42961ced0df678f9c8a841fda4ca3913e7/slider.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/componenets/Slider/slider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/componenets/Slider/slider.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/componenets/Slider/slider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/componenets/Slider/slider.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/componenets/SlidersContainer/Data/SlidersData.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/componenets/SlidersContainer/SlidersContainer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/componenets/SlidersContainer/SlidersContainer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/pages/Equalizer/Equalizer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/pages/Equalizer/Equalizer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/react-app-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/src/reportWebVitals.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-client/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/equalizer-srv/app.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2H84ZyHZQ76aHHWCJz8zeCegYEE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app.py" />
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Equalizer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\kamel\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de475fef-8d8f-428d-8884-19ab4ca3388a" name="Default Changelist" comment="" />
+      <created>1667653440329</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667653440329</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
