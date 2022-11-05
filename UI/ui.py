@@ -1,13 +1,13 @@
 import streamlit as st
-# from StateManagement.StateManagement import StateManagement
+from state_management.state_management import state_management
 from UI.Widgets.UploadWidget import UploadWidget
-from UI.Widgets.SlidersWidget import SlidersWidget
+from UI.Views.SlidersWidget import SlidersWidget
 from UI.Views.FreqGraph import FreqGraph
 from UI.Views.SpectrogramGraph import SpectrogramGraph
 
 class AppUi:
     def __init__(self):
-        # state = StateManagement()
+        state = state_management()
         # config
         st.set_page_config(page_title='Frequalizer')
 
