@@ -11,12 +11,13 @@
 }
 
 /* header & footer*/
-.css-19903na.e8zbici2 {
+.css-1avcm0n.e8zbici2 {
     visibility : hidden;
 }
-.css-1fbvalz.egzxvld0 {
+.css-1lsmgbg.egzxvld0 {
     visibility : hidden;
 }
+
 
 /* body*/
 .css-12oz5g7 {
@@ -67,3 +68,13 @@ hr{
     display: block;
     
 } 
+
+.css-x8wxsk.exg6vvm15{
+    height: 50px;
+    overflow: hidden;
+}
+
+.css-u8hs99.exg6vvm14{
+    height: 30px;
+    margin-top: -5px;
+}

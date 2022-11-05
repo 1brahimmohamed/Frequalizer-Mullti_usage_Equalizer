@@ -10,7 +10,7 @@ class FreqGraph:
         self.fig.update_yaxes(showgrid=False, automargin=True)
 
         self.fig.update_layout(
-            height=500,
+            height=200,
             margin={
                 'l': 0,
                 'r': 0,

@@ -1,20 +1,31 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
+import plotly.graph_objects as go
+
 
 class SpectrogramGraph():
     def __init__(self):
-        fig = Figure()
-        axes = fig.add_subplot(111)
+        self.fig = go.Figure()
+        self.fig.update_layout(yaxis_title="Spectogram")
+        self.fig.update_xaxes(showgrid=False, automargin=True)
+        self.fig.update_yaxes(showgrid=False, automargin=True)
 
-        for spine in ['right', 'top', 'left', 'bottom']:
-            axes.spines[spine].set_color('gray')
-
-        fig.tight_layout()
-        # axes.axis('off')
-
-        # Plot the signal
-
-        cmap = plt.get_cmap('inferno')
+        self.fig.update_layout(
+            height=180,
+            margin={
+                'l': 0,
+                'r': 0,
+                'b': 0,
+                't': 0
+            }
+        )
+        self.fig.update_layout(legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
+        ))
         
-        st.pyplot(fig)
+        st.plotly_chart(self.fig)
