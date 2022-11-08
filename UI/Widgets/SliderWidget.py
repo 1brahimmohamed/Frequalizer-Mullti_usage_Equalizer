@@ -1,6 +1,7 @@
 import os
 import streamlit.components.v1 as components
 
+
 class SliderWidget:
     def __init__(self, value, min, max, key):
         _vertical_slider = components.declare_component(

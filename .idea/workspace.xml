@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de475fef-8d8f-428d-8884-19ab4ca3388a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Equalizer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Equalizer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/Widgets/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Widgets/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/Widgets/SliderWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Widgets/SliderWidget.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/Basic signal processing.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -20,19 +27,28 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2H84ZyHZQ76aHHWCJz8zeCegYEE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/ibrahim/MyPC/Projects/Tamora/Equalizer"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ibrahim/MyPC/Projects/Tamora/Equalizer/Notebooks/data&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Notebooks/data" />
+      <recent name="$PROJECT_DIR$/Notebooks" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Equalizer" />
@@ -65,7 +81,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667653440329</updated>
-      <workItem from="1667682737497" duration="1055000" />
+      <workItem from="1667682737497" duration="2320000" />
+      <workItem from="1667843006320" duration="13000" />
+      <workItem from="1667906870379" duration="15390000" />
+      <workItem from="1667928785233" duration="618000" />
+      <workItem from="1667929756012" duration="601000" />
     </task>
     <servers />
   </component>

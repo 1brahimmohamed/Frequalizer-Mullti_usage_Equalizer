@@ -7,6 +7,7 @@ from UI.Views.SpectrogramGraph import SpectrogramGraph
 
 import os
 
+
 class AppUi:
     def __init__(self):
         state = state_management()
