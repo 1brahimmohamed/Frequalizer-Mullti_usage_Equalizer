@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="de475fef-8d8f-428d-8884-19ab4ca3388a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/Basic signal processing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Basic signal processing.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/data/Basha E3temed (feat. Abo El Anwar).mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/data/Mohamed Mounir - Ezay.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/Basic signal processing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Basic signal processing.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,7 @@
       <workItem from="1667843006320" duration="13000" />
       <workItem from="1667906870379" duration="15390000" />
       <workItem from="1667928785233" duration="618000" />
-      <workItem from="1667929756012" duration="3544000" />
+      <workItem from="1667929756012" duration="3863000" />
     </task>
     <servers />
   </component>
