@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="de475fef-8d8f-428d-8884-19ab4ca3388a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/Basic signal processing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Basic signal processing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/Basic signal processing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Basic signal processing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/Basic signal processing.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +17,17 @@
         <option value="Jupyter Notebook" />
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -32,19 +44,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ibrahim/MyPC/Projects/Tamora/Equalizer/Notebooks/data&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/ibrahim/MyPC/Projects/Tamora/Equalizer/Notebooks",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Notebooks/data" />
       <recent name="$PROJECT_DIR$/Notebooks" />
+      <recent name="$PROJECT_DIR$/Notebooks/data" />
     </key>
   </component>
   <component name="RunManager">
@@ -84,6 +97,9 @@
       <workItem from="1667906870379" duration="15390000" />
       <workItem from="1667928785233" duration="618000" />
       <workItem from="1667929756012" duration="3863000" />
+      <workItem from="1667934324726" duration="5430000" />
+      <workItem from="1667946464132" duration="44000" />
+      <workItem from="1667989706952" duration="6214000" />
     </task>
     <servers />
   </component>
