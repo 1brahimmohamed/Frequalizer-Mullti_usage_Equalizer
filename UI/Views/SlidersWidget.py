@@ -1,13 +1,10 @@
 import streamlit as st
 from UI.Widgets.SliderWidget import SliderWidget
 from Data.SlidersData import slidersData
-# from StateManagement.StateManagement import StateManagement
 
 
 class SlidersWidget:
     def __init__(self):
-        # State = StateManagement()
-
         try:
             columnsLst = []
             for i in range(len(slidersData[st.session_state.Mode])):
