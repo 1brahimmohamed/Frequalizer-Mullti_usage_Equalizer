@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de475fef-8d8f-428d-8884-19ab4ca3388a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Notebooks/.ipynb_checkpoints/Vocals Processing-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebooks/Vocals Processing.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebooks/data/vocals.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Notebooks/Basic signal processing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Basic signal processing.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/Basic signal processing.ipynb" beforeDir="false" />
@@ -99,7 +102,7 @@
       <workItem from="1667929756012" duration="3863000" />
       <workItem from="1667934324726" duration="5430000" />
       <workItem from="1667946464132" duration="44000" />
-      <workItem from="1667989706952" duration="6214000" />
+      <workItem from="1667989706952" duration="7049000" />
     </task>
     <servers />
   </component>
