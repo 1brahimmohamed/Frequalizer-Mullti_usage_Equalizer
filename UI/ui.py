@@ -32,7 +32,7 @@ class AppUi:
 
         with columns2[3]:
             FreqGraph(st.session_state.currentSignal, 'pureLinePlot')
-            SpectrogramGraph(   )
+            SpectrogramGraph()
         
         with columns2[5]:
             FreqGraph(st.session_state.currentSignal, 'LinePlot')
