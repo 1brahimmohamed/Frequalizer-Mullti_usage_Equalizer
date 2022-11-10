@@ -32,6 +32,8 @@ class state_management:
             st.session_state.counter = 0
 
 
+
+
     def save_file(self, file):       
         processing = Processing()
         song, sampleRate = processing.read_signal(file)
@@ -52,16 +54,18 @@ class state_management:
         N = signalDataFrame.shape[0] 
         burst = 500
         size = burst
-        pureLinePlot = st.session_state.pureLinePlot
-        LinePlot = st.session_state.LinePlot
+        # pureLinePlot = st.session_state.pureLinePlot
+        # LinePlot = st.session_state.LinePlot
+        graph = st.session_state.graph
 
         st.session_state.counter = st.session_state.startTime
         while(st.session_state.counter < N):
             step_df = signalDataFrame.iloc[st.session_state.counter:st.session_state.counter + size]
             lines = self.plot_animation(step_df)
             #---------------------------------------
-            pureLinePlot = pureLinePlot.altair_chart(lines)
-            LinePlot = LinePlot.altair_chart(lines)
+            graph = graph.altair_chart(alt.hconcat(lines, lines))
+            # pureLinePlot = pureLinePlot.altair_chart(lines)
+            # LinePlot = LinePlot.altair_chart(lines)
             #---------------------------------------
             time.sleep(0.001)
             st.session_state.counter += 1

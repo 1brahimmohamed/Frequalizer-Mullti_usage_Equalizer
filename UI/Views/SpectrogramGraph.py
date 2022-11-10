@@ -11,7 +11,7 @@ class SpectrogramGraph():
     def __init__(self):
         State = state_management()
 
-        fig,ax = plt.subplots(figsize=(6,3))
+        fig, ax = plt.subplots(1, 2, figsize=(12,2.5))
         if len(st.session_state.currentSignal['signal']) != 0:
             signal = np.array(st.session_state.currentSignal['signal'])
             sampleRate = st.session_state.currentSignal['sampleRate']
@@ -20,11 +20,12 @@ class SpectrogramGraph():
             D = librosa.amplitude_to_db(np.abs(d),ref=np.max)
 
 
-            img = dsp.specshow(D, y_axis='linear', x_axis='s',sr=sampleRate,ax=ax)
+            img = dsp.specshow(D, y_axis='linear', x_axis='s',sr=sampleRate,ax=ax[0])
 
-            dsp.specshow(D,y_axis='log',x_axis='s',sr=sampleRate,ax=ax)
-            ax.set(title='Log frequency power spectrogram')
+            dsp.specshow(D,y_axis='log',x_axis='s',sr=sampleRate,ax=ax[0])
+            ax[0].set(title='Log frequency power spectrogram')
 
-            fig.colorbar(img, ax=ax, format='%+2.f dB')
+            fig.colorbar(img, ax=ax[0], format='%+2.f dB')
+            plt.tight_layout()
 
         st.pyplot(fig)

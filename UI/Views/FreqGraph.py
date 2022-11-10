@@ -10,14 +10,17 @@ class FreqGraph:
         signalDataFrame = pd.DataFrame({
             't':signal['time'],
             'y':signal['signal']
-        })
-    
-        lines = alt.Chart(signalDataFrame.iloc[st.session_state.startTime: 
-                                                st.session_state.startTime + 500,:]).mark_line().encode(
-            x='t',
-            y='y'
+        })    
+
+        lines = alt.Chart(signalDataFrame).mark_line().encode(
+            alt.X('t', scale=alt.Scale(domain=(0, 0.1))),
+            alt.Y('y')
+
         ).properties(
-            width=480,
+            width=470,
             height=200
+        ).add_selection(
+            st.session_state.zoom
         )
-        st.session_state['{}'.format(key)] = st.altair_chart(lines)
+
+        st.session_state['{}'.format(key)] = lines
