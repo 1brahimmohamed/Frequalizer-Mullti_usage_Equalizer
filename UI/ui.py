@@ -4,6 +4,9 @@ from UI.Widgets.UploadWidget import UploadWidget
 from UI.Views.SlidersWidget import SlidersWidget
 from UI.Views.FreqGraph import FreqGraph
 from UI.Views.SpectrogramGraph import SpectrogramGraph
+from UI.Widgets.PlayBtnWidget import PlayBtnWidget
+from UI.Widgets.StopBtnWidget import StopBtnWidget
+
 import os
 import altair as alt
 
@@ -30,7 +33,8 @@ class AppUi:
             UploadWidget()
             st.button('Play/Pause', 'startButton', on_click=self.start)
             st.button('Stop Button', 'stopButton', on_click=self.stop)
-
+            PlayBtnWidget()
+            StopBtnWidget()
         st.session_state.zoom = alt.selection_interval(bind='scales')
 
         FreqGraph(st.session_state.currentSignal, 'pureLinePlot')
