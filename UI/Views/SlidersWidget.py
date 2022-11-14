@@ -4,8 +4,9 @@ from Data.SlidersData import slidersData
 
 
 class SlidersWidget:
-    def __init__(self):
-        # try:
+    def __init__(self, Mode):
+        try:
+            st.session_state.Mode = Mode
             columnsLst = []
             for i in range(len(slidersData[st.session_state.Mode])):
                 columnsLst.append(0.05)
@@ -18,11 +19,11 @@ class SlidersWidget:
             for i in range(1, len(columnsLst), 2):
                 with cols[i]:
                     # lst = slidersData[st.session_state.Mode][counter]['sliderRange']
-                    SliderWidget(0, -5, 5, "Slider{}".format(str(counter)))
+                    SliderWidget(0, -5, 5, "Slider{}{}".format(Mode, str(counter)))
                     counter+=1
                 
-        # except Exception as e:
-        #     st.error(e)
+        except Exception as e:
+            st.error(e)
 
     def change_upload_value(self):
         pass

@@ -17,7 +17,7 @@ class SliderWidget:
 
         if(slider and slider != st.session_state['_{}'.format(key)]):
             st.session_state['_{}'.format(key)] = slider
-            state.change_slider_value(int(key[6:]), slider)
+            state.change_slider_value(int(key[7:]), slider)
             st.experimental_rerun()
 
         

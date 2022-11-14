@@ -103,8 +103,8 @@ class state_management:
             x='t',
             y='y',
         ).properties(
-        width=600,
-        height=150
+            width=380,
+            height=150
         ) 
         return lines
 

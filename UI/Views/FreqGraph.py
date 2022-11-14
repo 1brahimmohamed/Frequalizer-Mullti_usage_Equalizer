@@ -24,7 +24,7 @@ class FreqGraph:
             alt.Y('y')
 
         ).properties(
-            width=600,
+            width=380,
             height=150
         ).add_selection(
             st.session_state.zoom

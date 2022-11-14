@@ -11,8 +11,12 @@
 }
 
 /* header & footer*/
-.css-1avcm0n.e8zbici2 {
+.css-1avcm0n.e8zbici2{
     visibility : hidden;
+}
+
+.css-18ni7ap.e8zbici2{
+    visibility: hidden;
 }
 .css-1lsmgbg.egzxvld0 {
     visibility : hidden;
@@ -83,3 +87,8 @@ hr{
     margin-top: -5px;
 }
 
+/* .css-949r0i.e1tzin5v2{
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+} */
