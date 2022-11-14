@@ -10,7 +10,8 @@ class UploadWidget:
             uploadedSignals = st.file_uploader(
                 "Upload Signal", type=["wav"], key='uploadButton', on_change=self.change_upload_value)
 
-            if (uploadedSignals is not None):
+            if (uploadedSignals is not None and uploadedSignals != st.session_state.x):
+                st.session_state.x = uploadedSignals
                 State.save_file(uploadedSignals)
 
         except Exception as e:

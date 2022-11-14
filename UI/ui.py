@@ -28,25 +28,38 @@ class AppUi:
         """, unsafe_allow_html=True)
 
 
-        columns2 = st.columns([0.1, 1.5, 0.1, 4, 0.2])
-        with columns2[1]:
+        columns = st.columns([0.1, 4, 0.1])
+        with columns[1]:
             UploadWidget()
-            st.button('Play/Pause', 'startButton', on_click=self.start)
-            st.button('Stop Button', 'stopButton', on_click=self.stop)
-            PlayBtnWidget()
-            StopBtnWidget()
+
+
         st.session_state.zoom = alt.selection_interval(bind='scales')
+        FreqGraph('pureLinePlot', False)
+        FreqGraph('LinePlot', True)
 
-        FreqGraph(st.session_state.currentSignal, 'pureLinePlot')
-        FreqGraph(st.session_state.currentSignal, 'LinePlot')
+        columns2 = st.columns([0.4, 4, 0.4])
+        with columns2[1]:
+            st.session_state['graph'] = st.altair_chart(alt.hconcat(st.session_state['pureLinePlot'], 
+                                                                    st.session_state['LinePlot']))
 
-        with columns2[3]:
-            st.session_state['graph'] = st.altair_chart(alt.hconcat(st.session_state['pureLinePlot'], st.session_state['LinePlot']))
+        columns3 = st.columns([0.5, 4, 0.5])
+        with columns3[1]:
             SpectrogramGraph()
-        
-        # with columns2[5]:
-        #     SpectrogramGraph()
 
+
+        columns4 = st.columns([0.5, 2, 0.5, 0.5, 2, 0.5])
+        with columns4[1]:
+            st.audio(st.session_state.uploadButton, format="audio/wav", start_time=0)
+
+        with columns4[2]:
+            st.button('Play/Pause', 'startButton', on_click=self.start)
+
+        with columns4[3]:
+            st.button('Stop Button', 'stopButton', on_click=self.stop)
+
+        with columns4[4]:
+            st.audio(st.session_state.uploadButton, format="audio/wav", start_time=0)
+                        
 
         SlidersWidget()
         if st.session_state.startState == True:
