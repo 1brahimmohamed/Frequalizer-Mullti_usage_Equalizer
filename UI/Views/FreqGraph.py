@@ -18,9 +18,11 @@ class FreqGraph:
                 'y':st.session_state.currentSignal['signal']
             }) 
 
-
+        startX = 0
+        if not signalDataFrame.empty:
+            startX = st.session_state.currentSignal['time'][st.session_state.counter]
         lines = alt.Chart(signalDataFrame).mark_line().encode(
-            alt.X('t', scale=alt.Scale(domain=(0, 0.1))),
+            alt.X('t', scale=alt.Scale(domain=(startX, startX + 0.1))),
             alt.Y('y')
 
         ).properties(
