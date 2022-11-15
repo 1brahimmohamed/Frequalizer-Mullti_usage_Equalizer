@@ -13,19 +13,30 @@ class SpectrogramGraph():
 
         fig, ax = plt.subplots(1, 2, figsize=(12,2.5))
         if len(st.session_state.currentSignal['signal']) != 0:
+
             signal = np.array(st.session_state.currentSignal['signal'])
+            updatedSignal = np.array(st.session_state.currentSignal['updatedSignal'])
+
             sampleRate = st.session_state.currentSignal['sampleRate']
-            y_percussive = librosa.effects.percussive(signal, margin=5)
-            d = librosa.stft(y_percussive)
+
+            d = librosa.stft(signal)
+            dUpdated = librosa.stft(updatedSignal)
+            
             D = librosa.amplitude_to_db(np.abs(d),ref=np.max)
+            DUpdated = librosa.amplitude_to_db(np.abs(dUpdated),ref=np.max)
 
 
             img = dsp.specshow(D, y_axis='linear', x_axis='s',sr=sampleRate,ax=ax[0])
+            imgUpdated = dsp.specshow(DUpdated, y_axis='linear', x_axis='s',sr=sampleRate,ax=ax[1])
 
             dsp.specshow(D,y_axis='log',x_axis='s',sr=sampleRate,ax=ax[0])
-            ax[0].set(title='Log frequency power spectrogram')
+            dsp.specshow(DUpdated,y_axis='log',x_axis='s',sr=sampleRate,ax=ax[1])
+
+            ax[0].set(title='Original Signal spectrogram')
+            ax[1].set(title='Updated Signal spectrogram')
 
             fig.colorbar(img, ax=ax[0], format='%+2.f dB')
+            fig.colorbar(imgUpdated, ax=ax[1], format='%+2.f dB')
             plt.tight_layout()
-
+            
         st.pyplot(fig)

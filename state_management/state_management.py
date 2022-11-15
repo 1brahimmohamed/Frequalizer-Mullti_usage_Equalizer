@@ -9,18 +9,33 @@ import altair as alt
 import time
 import numpy as np 
 import pandas as pd
+from Data.SlidersData import slidersData
+
 
 class state_management:
     def __init__(self):
+        if 'x' not in st.session_state:
+            st.session_state.x = None
+
         if 'Mode' not in st.session_state:
             st.session_state.Mode = 0
         
         if 'currentSignal' not in st.session_state:
             st.session_state.currentSignal = {
                 'signal':[],
+                'updatedSignal':[],
                 'time':[],
                 'sampleRate':0
             }
+
+        if 'fourierSignal' not in st.session_state:
+            st.session_state.fourierSignal = {
+                'magnitude':[],
+                'newMagnitude':[],
+                'phase':[],
+                'freq':[]
+            }
+
 
         if 'startState' not in st.session_state:
             st.session_state.startState = False
@@ -32,8 +47,6 @@ class state_management:
             st.session_state.counter = 0
 
 
-
-
     def save_file(self, file):       
         processing = Processing()
         song, sampleRate = processing.read_signal(file)
@@ -41,8 +54,17 @@ class state_management:
         st.session_state.currentSignal = {
             'time':t,
             'signal':song,
+            'updatedSignal':song,
             'sampleRate':sampleRate
         }
+        magnitude, phase, frequency = processing.fourier_function(st.session_state.currentSignal)
+        st.session_state.fourierSignal = {
+                'magnitude':magnitude,
+                'newMagnitude':magnitude,
+                'phase':phase,
+                'freq':frequency
+        }
+
 
 
     def start_signal_drawing(self):
@@ -50,20 +72,25 @@ class state_management:
             't':st.session_state.currentSignal['time'],
             'y':st.session_state.currentSignal['signal']
         })
+        updatedSignalDataFrame = pd.DataFrame({
+            't':st.session_state.currentSignal['time'],
+            'y':st.session_state.currentSignal['updatedSignal']
+        })
         
-        N = signalDataFrame.shape[0] 
-        burst = 500
+        N = signalDataFrame.shape[0]
+        burst = 2000
         size = burst
-        # pureLinePlot = st.session_state.pureLinePlot
-        # LinePlot = st.session_state.LinePlot
+
         graph = st.session_state.graph
 
         st.session_state.counter = st.session_state.startTime
         while(st.session_state.counter < N):
-            step_df = signalDataFrame.iloc[st.session_state.counter:st.session_state.counter + size]
-            lines = self.plot_animation(step_df)
+            dfStep = signalDataFrame.iloc[st.session_state.counter:st.session_state.counter + size]
+            updatedDfStep = updatedSignalDataFrame.iloc[st.session_state.counter:st.session_state.counter + size]
+            lines = self.plot_animation(dfStep)
+            updatedLines = self.plot_animation(updatedDfStep)
             #---------------------------------------
-            graph = graph.altair_chart(alt.hconcat(lines, lines))
+            graph = graph.altair_chart(alt.hconcat(lines, updatedLines))
             # pureLinePlot = pureLinePlot.altair_chart(lines)
             # LinePlot = LinePlot.altair_chart(lines)
             #---------------------------------------
@@ -76,7 +103,21 @@ class state_management:
             x='t',
             y='y',
         ).properties(
-        width=480,
-        height=200
+            width=380,
+            height=150
         ) 
         return lines
+
+    def change_slider_value(self, sliderIndex, sliderValue):    
+        if st.session_state.Mode == 0:
+            maxFreq = max(st.session_state.fourierSignal['freq'])
+            sliderV = maxFreq/10
+            sliderRanges = [[sliderV * sliderIndex, sliderV * (sliderIndex + 1)]]
+        else:
+            sliderRanges = slidersData[st.session_state.Mode][sliderIndex]['freqRanges']
+        processing = Processing()
+        st.session_state.fourierSignal['newMagnitude'] = processing.equalizerRange_Triangle(
+                                st.session_state.fourierSignal, sliderRanges, sliderValue)
+
+        st.session_state.currentSignal['updatedSignal'] = processing.calc_inv_fourier(st.session_state.fourierSignal['newMagnitude'],
+                                st.session_state.fourierSignal['phase'])
