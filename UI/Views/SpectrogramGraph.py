@@ -9,9 +9,7 @@ import librosa.display as dsp
 
 class SpectrogramGraph():
     def __init__(self):
-        State = state_management()
-
-        fig, ax = plt.subplots(1, 2, figsize=(12,2.5))
+        fig, ax = plt.subplots(1, 2, figsize=(15,3))
         if len(st.session_state.currentSignal['signal']) != 0:
 
             signal = np.array(st.session_state.currentSignal['signal'])
