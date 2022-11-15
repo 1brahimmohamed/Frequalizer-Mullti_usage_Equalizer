@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de475fef-8d8f-428d-8884-19ab4ca3388a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/Vocals Processing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Vocals Processing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/Medical Signal Processing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Medical Signal Processing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/Vocals Processing.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,18 +49,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/My PC/Projects/DSP/Equalizer/Notebooks/data",
+    "last_opened_file_path": "D:/My PC/Projects/DSP/Equalizer/Notebooks",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\My PC\Projects\DSP\Equalizer\Notebooks" />
+      <recent name="D:\My PC\Projects\DSP\Equalizer\Notebooks\data\animals" />
       <recent name="D:\My PC\Projects\DSP\Equalizer\Notebooks\data" />
       <recent name="D:\My PC\Projects\DSP\Equalizer\UI\Widgets" />
       <recent name="D:\My PC\Projects\DSP\Equalizer\UI\Widgets\PlayBtnBuild" />
-      <recent name="$PROJECT_DIR$/Notebooks" />
-      <recent name="$PROJECT_DIR$/Notebooks/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\My PC\Projects\DSP\Equalizer\Notebooks\data" />
@@ -111,7 +111,9 @@
       <workItem from="1668366198129" duration="2669000" />
       <workItem from="1668375921013" duration="2819000" />
       <workItem from="1668454705792" duration="4762000" />
-      <workItem from="1668492588780" duration="911000" />
+      <workItem from="1668492588780" duration="1916000" />
+      <workItem from="1668502262610" duration="201000" />
+      <workItem from="1668502475773" duration="10743000" />
     </task>
     <servers />
   </component>
