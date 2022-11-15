@@ -40,6 +40,9 @@ class state_management:
         if 'startState' not in st.session_state:
             st.session_state.startState = False
 
+        if 'emotionState' not in st.session_state:
+            st.session_state.emotionState = '▶'
+
         if 'startTime' not in st.session_state:
             st.session_state.startTime = 0
 

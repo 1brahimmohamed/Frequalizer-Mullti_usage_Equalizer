@@ -3,6 +3,9 @@ import os
 import altair as alt
 import streamlit as st
 import streamlit_nested_layout
+from IPython.display import Audio as audioPlayer
+import librosa 
+import librosa.display as dsp
 
 from state_management.state_management import state_management
 from UI.Views.FreqGraph import FreqGraph
@@ -33,15 +36,17 @@ class AppUi:
 
         with columns[1]:
             UploadWidget()
-            columns1 = st.columns([0.1, 0.2, 0.2, 0.1])
+            columns1 = st.columns([0.1, 0.05, 0.07, 0.1])
             with columns1[1]:
-                st.button('Play/Pause', 'startButton', on_click=self.start)
+                st.button(st.session_state.emotionState, 'startButton', on_click=self.start)
             with columns1[2]:
-                st.button('Stop Button', 'stopButton', on_click=self.stop)
+                st.button('⏹️', 'stopButton', on_click=self.stop)
             st.write('Original Signal')
             st.audio(st.session_state.uploadButton, format="audio/wav", start_time=0)
             st.write('Updated Signal')
-            st.audio(st.session_state.uploadButton, format="audio/wav", start_time=0)
+            # st.audio(librosa.('file.wav', st.session_state.currentSignal['updatedSignal'], 
+            #                                                       st.session_state.currentSignal['sampleRate']), 
+            #                                                       format="audio/wav", start_time=0)
             SpeedControlWidget()
 
 
@@ -67,6 +72,10 @@ class AppUi:
 
     def start(self):
         st.session_state.startState = not(st.session_state.startState)
+        if st.session_state.startState == True:
+            st.session_state.emotionState = '⏸'
+        else:
+            st.session_state.emotionState = '▶️'
         st.session_state.startTime = st.session_state.counter
 
     def stop(self):
