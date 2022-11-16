@@ -6,15 +6,15 @@
  * See https://goo.gl/nhQhGp
  *
  * The rest of the code is auto-generated. Please don't update this file
- * directly; instead, make changes to your Workbox SliderBuild configuration
- * and re-run your SliderBuild process.
+ * directly; instead, make changes to your Workbox build configuration
+ * and re-run your build process.
  * See https://goo.gl/2aRDsh
  */
 
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "./precache-manifest.6f4aaf277594599ff2449a8cb4a8c957.js"
+  "./precache-manifest.2a162a09a929d7b952f91dcb73a54670.js"
 );
 
 self.addEventListener('message', (event) => {

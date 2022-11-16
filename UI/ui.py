@@ -37,11 +37,22 @@ class AppUi:
                 st.button(st.session_state.emotionState, 'startButton', on_click=self.start)
             with columns1[2]:
                 st.button('⏹️', 'stopButton', on_click=self.stop)
-            st.write('Original Signal')
-            st.audio(st.session_state.uploadButton, format="audio/wav", start_time=0)
-            st.write('Updated Signal')
-            # st.audio('./uploads/after.wav', 'audio/wav', 0)
-            SpeedControlWidget()
+            nestedCols = st.columns([0.1, 2, 0.1, 2, 0.1])
+            with nestedCols[1]:
+                st.write('Original Signal')
+                st.audio(st.session_state.uploadButton, format="audio/wav", start_time=0)
+            with nestedCols[3]:
+                st.write('Updated Signal')
+                if st.session_state.uploadButton:
+                    st.audio("./uploads/after.wav", format="audio/wav", start_time=0)
+                else:
+                    st.audio(st.session_state.uploadButton, format="audio/wav", start_time=0)
+
+            # SpeedControlWidget()
+            modesLst = ['Uniform', 'Vocals', 'Music', 'Bio-medical', 'Tone']
+            mode = st.selectbox("Select Mode:", options=modesLst)
+            if mode:
+                st.session_state.Mode = modesLst.index(mode)
 
 
         st.session_state.zoom = alt.selection_interval(bind='scales')
@@ -54,12 +65,7 @@ class AppUi:
                                                                     st.session_state['LinePlot']))
             SpectrogramGraph()
 
-        columns2 = st.columns([0.05, 5, 0.05])
-        with columns2[1]:     
-            tabs = st.tabs(['Uniform', 'Vocals', 'Music', 'Bio-medical', 'Tone'])
-            for i in range(5):
-                with tabs[i]:
-                    SlidersWidget(i)
+        SlidersWidget(st.session_state.Mode)
                 
         if st.session_state.startState == True:
             state.start_signal_drawing()

@@ -1,15 +1,11 @@
 import streamlit as st
-import os
-from pathlib import Path
-from werkzeug.utils import secure_filename
 from Processing.processing import Processing
-import soundfile as sf
-import librosa 
 import altair as alt
 import time
 import numpy as np 
 import pandas as pd
 from Data.SlidersData import slidersData
+import scipy
 
 
 class state_management:
@@ -114,7 +110,7 @@ class state_management:
     def change_slider_value(self, sliderIndex, sliderValue):    
         if st.session_state.Mode == 0:
             maxFreq = max(st.session_state.fourierSignal['freq'])
-            sliderV = maxFreq/10
+            sliderV = maxFreq/8
             sliderRanges = [[sliderV * sliderIndex, sliderV * (sliderIndex + 1)]]
         else:
             sliderRanges = slidersData[st.session_state.Mode][sliderIndex]['freqRanges']
@@ -124,3 +120,6 @@ class state_management:
 
         st.session_state.currentSignal['updatedSignal'] = processing.calc_inv_fourier(st.session_state.fourierSignal['newMagnitude'],
                                 st.session_state.fourierSignal['phase'])
+
+        scipy.io.wavfile.write("./uploads/after.wav", st.session_state.currentSignal['sampleRate'],
+                                                    st.session_state.currentSignal['updatedSignal'])
