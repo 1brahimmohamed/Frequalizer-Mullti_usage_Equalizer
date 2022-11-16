@@ -3,16 +3,12 @@ import os
 import altair as alt
 import streamlit as st
 import streamlit_nested_layout
-from IPython.display import Audio as audioPlayer
-import librosa 
-import librosa.display as dsp
+import soundfile as sf
 
 from state_management.state_management import state_management
 from UI.Views.FreqGraph import FreqGraph
 from UI.Views.SlidersWidget import SlidersWidget
 from UI.Views.SpectrogramGraph import SpectrogramGraph
-from UI.Widgets.PlayBtnWidget import PlayBtnWidget
-from UI.Widgets.StopBtnWidget import StopBtnWidget
 from UI.Widgets.UploadWidget import UploadWidget
 from UI.Widgets.SpeedControlWidget import SpeedControlWidget
 
@@ -44,9 +40,7 @@ class AppUi:
             st.write('Original Signal')
             st.audio(st.session_state.uploadButton, format="audio/wav", start_time=0)
             st.write('Updated Signal')
-            # st.audio(librosa.('file.wav', st.session_state.currentSignal['updatedSignal'], 
-            #                                                       st.session_state.currentSignal['sampleRate']), 
-            #                                                       format="audio/wav", start_time=0)
+            # st.audio('./uploads/after.wav', 'audio/wav', 0)
             SpeedControlWidget()
 
 
