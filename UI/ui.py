@@ -43,7 +43,7 @@ class AppUi:
                 st.audio(st.session_state.uploadButton, format="audio/wav", start_time=0)
             with nestedCols[3]:
                 st.write('Updated Signal')
-                if st.session_state.uploadButton:
+                if st.session_state.sliderState:
                     st.audio("./uploads/after.wav", format="audio/wav", start_time=0)
                 else:
                     st.audio(st.session_state.uploadButton, format="audio/wav", start_time=0)

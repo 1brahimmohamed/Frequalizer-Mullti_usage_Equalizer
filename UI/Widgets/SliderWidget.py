@@ -11,6 +11,7 @@ class SliderWidget:
             path='./UI/Widgets/build',
         )
         slider = _vertical_slider(label = label, value = value, min = min, max = max)
+        st.session_state['_{}_'.format(key)] = slider
 
         if '_{}'.format(key) not in st.session_state:
             st.session_state['_{}'.format(key)] = -1
