@@ -46,6 +46,9 @@ class state_management:
         if 'counter' not in st.session_state:
             st.session_state.counter = 0
 
+        if 'sliderState' not in st.session_state:
+            st.session_state.sliderState = False
+
 
     def save_file(self, file):       
         processing = Processing()
@@ -108,7 +111,7 @@ class state_management:
         ) 
         return lines
 
-    def change_slider_value(self, sliderIndex, sliderValue):    
+    def change_slider_value(self, sliderIndex, sliderValue):
         if st.session_state.Mode == 0:
             maxFreq = max(st.session_state.fourierSignal['freq'])
             sliderV = maxFreq/8
@@ -124,3 +127,4 @@ class state_management:
 
         scio.write("./uploads/after.wav", st.session_state.currentSignal['sampleRate'],
                                                     st.session_state.currentSignal['updatedSignal'])
+        st.session_state.sliderState = True
