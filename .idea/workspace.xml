@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de475fef-8d8f-428d-8884-19ab4ca3388a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/SlidersData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/SlidersData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/data/Sartaman.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/Views/FreqGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Views/FreqGraph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/state_management/state_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/state_management/state_management.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/after.wav" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/after.wav" afterDir="false" />
-    </list>
+    <list default="true" id="de475fef-8d8f-428d-8884-19ab4ca3388a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,6 +117,7 @@
       <workItem from="1668675117816" duration="117000" />
       <workItem from="1668679805762" duration="1340000" />
       <workItem from="1668684454872" duration="8859000" />
+      <workItem from="1668703359455" duration="313000" />
     </task>
     <servers />
   </component>
