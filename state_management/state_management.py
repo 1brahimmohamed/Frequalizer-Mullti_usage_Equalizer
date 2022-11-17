@@ -6,8 +6,7 @@ import numpy as np
 import pandas as pd
 from Data.SlidersData import slidersData
 import scipy
-import scipy.io.wavfile as scio
-
+import soundfile
 
 class state_management:
     def __init__(self):
@@ -81,7 +80,10 @@ class state_management:
         })
         
         N = signalDataFrame.shape[0]
-        burst = 2000
+        if(st.session_state.currentSignal['sampleRate'] != 0):
+            burst = int(st.session_state.currentSignal['sampleRate']/10)
+        else:
+            burst = 2000
         size = burst
 
         graph = st.session_state.graph
@@ -91,13 +93,11 @@ class state_management:
             dfStep = signalDataFrame.iloc[st.session_state.counter:st.session_state.counter + size]
             updatedDfStep = updatedSignalDataFrame.iloc[st.session_state.counter:st.session_state.counter + size]
             lines = self.plot_animation(dfStep)
+
             updatedLines = self.plot_animation(updatedDfStep)
-            #---------------------------------------
+
             graph = graph.altair_chart(alt.hconcat(lines, updatedLines))
-            # pureLinePlot = pureLinePlot.altair_chart(lines)
-            # LinePlot = LinePlot.altair_chart(lines)
-            #---------------------------------------
-            time.sleep(0.001)
+            time.sleep(0.0001)
             st.session_state.counter += 1
 
 
@@ -125,6 +125,9 @@ class state_management:
         st.session_state.currentSignal['updatedSignal'] = processing.calc_inv_fourier(st.session_state.fourierSignal['newMagnitude'],
                                 st.session_state.fourierSignal['phase'])
 
-        scio.write("./uploads/after.wav", st.session_state.currentSignal['sampleRate'],
-                                                    st.session_state.currentSignal['updatedSignal'])
+        soundfile.write("./uploads/after.wav", st.session_state.currentSignal['updatedSignal'], 
+                                         st.session_state.currentSignal['sampleRate'])
+
+        # scipy.io.wavfile.write("./uploads/after.wav", st.session_state.currentSignal['sampleRate'],
+        #                                             st.session_state.currentSignal['updatedSignal'])
         st.session_state.sliderState = True

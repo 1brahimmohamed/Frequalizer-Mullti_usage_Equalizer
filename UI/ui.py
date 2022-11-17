@@ -43,13 +43,13 @@ class AppUi:
                 st.audio(st.session_state.uploadButton, format="audio/wav", start_time=0)
             with nestedCols[3]:
                 st.write('Updated Signal')
-                if st.session_state.sliderState:
+                if st.session_state.sliderState and sf.read("./uploads/after.wav"):
                     st.audio("./uploads/after.wav", format="audio/wav", start_time=0)
                 else:
                     st.audio(st.session_state.uploadButton, format="audio/wav", start_time=0)
 
             # SpeedControlWidget()
-            modesLst = ['Uniform', 'Vocals', 'Music', 'Bio-medical', 'Tone']
+            modesLst = ['Uniform', 'Vowels', 'Music', 'Bio-medical', 'Tone']
             mode = st.selectbox("Select Mode:", options=modesLst)
             if mode:
                 st.session_state.Mode = modesLst.index(mode)

@@ -4,7 +4,7 @@ slidersData = [
     ],
     [
         {
-            "label":"A - E",
+            "label":"AE",
             "sliderRange" : [0, -5, 5],
             "freqRanges" :  [[170,265],[670,775],[975,1270],[470,510]]
         },
@@ -19,7 +19,7 @@ slidersData = [
             "freqRanges" :  [[165,260],[600,750],[820,1000]] 
         },
         {
-            "label":"S - C - H",
+            "label":"SCH",
             "sliderRange" : [0, -5, 5],
             "freqRanges" :  [[1900,5000]]
         },
