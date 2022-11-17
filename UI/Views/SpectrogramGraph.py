@@ -6,7 +6,6 @@ import librosa
 import librosa.display as dsp
 
 
-
 class SpectrogramGraph():
     def __init__(self):
         fig, ax = plt.subplots(1, 2, figsize=(15,3))
