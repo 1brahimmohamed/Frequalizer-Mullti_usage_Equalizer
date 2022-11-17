@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="de475fef-8d8f-428d-8884-19ab4ca3388a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/after.wav" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/after.wav" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/My PC/Projects/DSP/Equalizer/Notebooks/data&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/My PC/Projects/DSP/Equalizer/uploads/readme data&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
@@ -55,11 +57,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\My PC\Projects\DSP\Equalizer\uploads\readme data" />
       <recent name="D:\My PC\Projects\DSP\Equalizer\Notebooks\data" />
       <recent name="D:\My PC\Projects\DSP\Equalizer\Notebooks" />
       <recent name="D:\My PC\Projects\DSP\Equalizer\Notebooks\data\animals" />
       <recent name="D:\My PC\Projects\DSP\Equalizer\UI\Widgets" />
-      <recent name="D:\My PC\Projects\DSP\Equalizer\UI\Widgets\PlayBtnBuild" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\My PC\Projects\DSP\Equalizer\Notebooks\data" />
@@ -119,7 +121,8 @@
       <workItem from="1668675117816" duration="117000" />
       <workItem from="1668679805762" duration="1340000" />
       <workItem from="1668684454872" duration="8859000" />
-      <workItem from="1668703359455" duration="675000" />
+      <workItem from="1668703359455" duration="4853000" />
+      <workItem from="1668709460956" duration="1863000" />
     </task>
     <servers />
   </component>
