@@ -12,7 +12,7 @@ class Processing:
         pass
 
     def read_signal(self, file):
-        song, sampleRate = librosa.load(file, offset=1.0 , duration=20.0)
+        song, sampleRate = librosa.load(file)
         return song, sampleRate
 
     def fourier_function(self, signal):

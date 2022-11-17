@@ -7,6 +7,10 @@ import numpy as np
 
 class FreqGraph:
     def __init__(self, key, isUpdated):
+
+        print(len(st.session_state.currentSignal['time']))
+        print(len(st.session_state.currentSignal['updatedSignal']))
+
         if isUpdated:
             signalDataFrame = pd.DataFrame({
                 't':st.session_state.currentSignal['time'],

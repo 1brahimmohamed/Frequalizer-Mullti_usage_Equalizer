@@ -8,7 +8,7 @@ from Data.SlidersData import slidersData
 import scipy
 import soundfile
 from scipy.misc import electrocardiogram
-
+import pyrubberband as pyrb
 
 class state_management:
     def __init__(self):
@@ -111,18 +111,24 @@ class state_management:
         return lines
 
     def change_slider_value(self, sliderIndex, sliderValue):
+        flag = True
         if st.session_state.Mode == 0:
             maxFreq = max(st.session_state.fourierSignal['freq'])
             sliderV = maxFreq/8
             sliderRanges = [[sliderV * sliderIndex, sliderV * (sliderIndex + 1)]]
+        elif st.session_state.Mode == 4:
+            st.session_state.currentSignal['updatedSignal'] = pyrb.pitch_shift(st.session_state.currentSignal['signal'], \
+                                                                               st.session_state.currentSignal['sampleRate'], sliderValue)
+            flag = False
         else:
             sliderRanges = slidersData[st.session_state.Mode][sliderIndex]['freqRanges']
-        processing = Processing()
-        st.session_state.fourierSignal['newMagnitude'] = processing.equalizerRange_Triangle(
-                                st.session_state.fourierSignal, sliderRanges, sliderValue)
+        if flag:
+            processing = Processing()
+            st.session_state.fourierSignal['newMagnitude'] = processing.equalizerRange_Triangle(
+                                    st.session_state.fourierSignal, sliderRanges, sliderValue)
 
-        st.session_state.currentSignal['updatedSignal'] = processing.calc_inv_fourier(st.session_state.fourierSignal['newMagnitude'],
-                                st.session_state.fourierSignal['phase'])
+            st.session_state.currentSignal['updatedSignal'] = processing.calc_inv_fourier(st.session_state.fourierSignal['newMagnitude'],
+                                    st.session_state.fourierSignal['phase'])
         soundfile.write("./uploads/after.wav", st.session_state.currentSignal['updatedSignal'], 
                                          st.session_state.currentSignal['sampleRate'])
 
