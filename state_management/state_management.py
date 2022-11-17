@@ -65,6 +65,7 @@ class state_management:
             'sampleRate':sampleRate
         }
         self.fourier_transform()
+        st.session_state.sliderState = False
 
 
 

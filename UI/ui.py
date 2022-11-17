@@ -32,11 +32,13 @@ class AppUi:
 
         with columns[1]:
             UploadWidget()
-            columns1 = st.columns([0.1, 0.05, 0.07, 0.1])
+            columns1 = st.columns([0.1, 0.05, 0.07, 0.1, 0.1])
             with columns1[1]:
                 st.button(st.session_state.emotionState, 'startButton', on_click=self.start)
             with columns1[2]:
                 st.button('⏹️', 'stopButton', on_click=self.stop)
+            with columns1[3]:
+                spectrogram = st.checkbox('Spectogram', key="spectogramButton")
             nestedCols = st.columns([0.1, 2, 0.1, 2, 0.1])
             with nestedCols[1]:
                 st.write('Original Signal')
@@ -67,7 +69,8 @@ class AppUi:
             st.write("---")
             st.session_state['graph'] = st.altair_chart(alt.hconcat(st.session_state['pureLinePlot'], 
                                                                     st.session_state['LinePlot']))
-            SpectrogramGraph()
+            if st.session_state.spectogramButton:
+                SpectrogramGraph()
 
         SlidersWidget(st.session_state.Mode)
                 
