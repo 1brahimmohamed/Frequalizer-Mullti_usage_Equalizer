@@ -4,27 +4,27 @@ slidersData = [
     ],
     [
         {
-            "label":"AE",
-            "sliderRange" : [0, -5, 5],
-            "freqRanges" :  [[170,265],[670,775],[975,1270],[470,510]]
+            "label": "O",
+            "sliderRange": [0, -5, 5],
+            "freqRanges": [[165, 260], [600, 750], [820, 1000]]
         },
         {
-            "label":"I",
+            "label":"S",
             "sliderRange" : [0, -5, 5],
-            "freqRanges" :  [[175,550],[2650, 4400]]
-        },
-        {
-            "label":"O",
-            "sliderRange" : [0, -5, 5],
-            "freqRanges" :  [[165,260],[600,750],[820,1000]] 
+            "freqRanges" :  [[4800, 8500]]
         },
         {
             "label":"SCH",
             "sliderRange" : [0, -5, 5],
             "freqRanges" :  [[1900,5000]]
         },
+        {
+            "label":"Y",
+            "sliderRange" : [0, -5, 5],
+            "freqRanges" :  [[490,1800]]
+        },
     ],
-        [
+    [
         {
             "label":"Saxophone",
             "sliderRange" : [0, -5, 5],

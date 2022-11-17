@@ -36,7 +36,7 @@ class AppUi:
             with columns1[1]:
                 st.button(st.session_state.emotionState, 'startButton', on_click=self.start)
             with columns1[2]:
-                st.button('⏹️', 'stopButton', on_click=self.stop)
+                st.button('⏹', 'stopButton', on_click=self.stop)
             with columns1[3]:
                 spectrogram = st.checkbox('Spectogram', key="spectogramButton")
             nestedCols = st.columns([0.1, 2, 0.1, 2, 0.1])

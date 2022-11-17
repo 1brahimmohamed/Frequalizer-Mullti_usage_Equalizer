@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="de475fef-8d8f-428d-8884-19ab4ca3388a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/Mood Processing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Mood Processing.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/Vocals Processing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Notebooks/Vocals Processing.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/data/animals/mixkit-flock-of-wild-geese-20.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/data/animals/mixkit-medium-size-angry-dog-bark-54.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/data/animals/mixkit-pig-grunting-3.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notebooks/data/animals/mixkit-wild-lion-animal-roar-6.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Processing/processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Processing/processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/SlidersData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/SlidersData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notebooks/data/Sartaman.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/Views/FreqGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Views/FreqGraph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/ui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/state_management/state_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/state_management/state_management.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uploads/after.wav" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/after.wav" afterDir="false" />
     </list>
@@ -128,6 +124,7 @@
       <workItem from="1668634907862" duration="1969000" />
       <workItem from="1668675117816" duration="117000" />
       <workItem from="1668679805762" duration="1340000" />
+      <workItem from="1668684454872" duration="8859000" />
     </task>
     <servers />
   </component>

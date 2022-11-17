@@ -2,16 +2,14 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import streamlit as st
-import time
-import numpy as np
+
 
 class FreqGraph:
     def __init__(self, key, isUpdated):
-
-        print(len(st.session_state.currentSignal['time']))
-        print(len(st.session_state.currentSignal['updatedSignal']))
-
         if isUpdated:
+            if (len(st.session_state.currentSignal['time']) > len(st.session_state.currentSignal['updatedSignal'])):
+                st.session_state.currentSignal['time'] = st.session_state.currentSignal['time'][:len(st.session_state.currentSignal['updatedSignal'])]
+                st.session_state.currentSignal['signal'] = st.session_state.currentSignal['signal'][:len(st.session_state.currentSignal['updatedSignal'])]
             signalDataFrame = pd.DataFrame({
                 't':st.session_state.currentSignal['time'],
                 'y':st.session_state.currentSignal['updatedSignal']
