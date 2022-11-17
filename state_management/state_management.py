@@ -7,6 +7,8 @@ import pandas as pd
 from Data.SlidersData import slidersData
 import scipy
 import soundfile
+from scipy.misc import electrocardiogram
+
 
 class state_management:
     def __init__(self):
@@ -47,6 +49,9 @@ class state_management:
 
         if 'sliderState' not in st.session_state:
             st.session_state.sliderState = False
+        
+        if 'medicalMode' not in st.session_state:
+            st.session_state.medicalMode = True
 
 
     def save_file(self, file):       
@@ -59,13 +64,7 @@ class state_management:
             'updatedSignal':song,
             'sampleRate':sampleRate
         }
-        magnitude, phase, frequency = processing.fourier_function(st.session_state.currentSignal)
-        st.session_state.fourierSignal = {
-                'magnitude':magnitude,
-                'newMagnitude':magnitude,
-                'phase':phase,
-                'freq':frequency
-        }
+        self.fourier_transform()
 
 
 
@@ -124,10 +123,42 @@ class state_management:
 
         st.session_state.currentSignal['updatedSignal'] = processing.calc_inv_fourier(st.session_state.fourierSignal['newMagnitude'],
                                 st.session_state.fourierSignal['phase'])
-
         soundfile.write("./uploads/after.wav", st.session_state.currentSignal['updatedSignal'], 
                                          st.session_state.currentSignal['sampleRate'])
 
-        # scipy.io.wavfile.write("./uploads/after.wav", st.session_state.currentSignal['sampleRate'],
-        #                                             st.session_state.currentSignal['updatedSignal'])
         st.session_state.sliderState = True
+
+    def change_to_medical_mode(self):
+        if st.session_state.medicalMode:
+            song = electrocardiogram()
+            sampleRate = 360
+            time = np.arange(song.size) / sampleRate
+
+            slicedSong = []
+            slicedTime = []
+            for i in range(len(time)):
+                if(time[i] >= 45 and time[i] < 51):
+                    slicedSong.append(song[i])
+                    slicedTime.append(time[i])
+                elif time[i] > 51:
+                    break
+
+            st.session_state.currentSignal = {
+                    'signal':slicedSong,
+                    'updatedSignal':slicedSong,
+                    'time':slicedTime,
+                    'sampleRate':sampleRate
+            }
+            self.fourier_transform()
+            
+            st.session_state.medicalMode = False
+
+    def fourier_transform(self):
+        processing = Processing()
+        magnitude, phase, frequency = processing.fourier_function(st.session_state.currentSignal)
+        st.session_state.fourierSignal = {
+                'magnitude':magnitude,
+                'newMagnitude':magnitude,
+                'phase':phase,
+                'freq':frequency
+        }

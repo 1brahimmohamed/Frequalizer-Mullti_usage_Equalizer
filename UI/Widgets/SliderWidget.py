@@ -16,7 +16,8 @@ class SliderWidget:
         if '_{}'.format(key) not in st.session_state:
             st.session_state['_{}'.format(key)] = -1
 
-        if(slider and slider != st.session_state['_{}'.format(key)] and st.session_state.uploadButton):
+        if(slider and slider != st.session_state['_{}'.format(key)] and \
+            (st.session_state.uploadButton or st.session_state.Mode == 3)):
             st.session_state['_{}'.format(key)] = slider
             state.change_slider_value(int(key[7:]), slider)
             st.experimental_rerun()

@@ -34,7 +34,7 @@ class Processing:
         #manipulate mag over a specific range
         slider_dB = int(slider_dB)
         for rng in slider_ranges:
-            # adjust magnitude of range in list      
+            # adjust magnitude of range in list
             target_freq= list(np.where((frequency>rng[0])&(frequency<rng[1]))[0])
             #generate a triangular window
             triangle_window = 10**((slider_dB)*scipy.signal.windows.triang(len(target_freq)))

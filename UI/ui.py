@@ -53,6 +53,10 @@ class AppUi:
             mode = st.selectbox("Select Mode:", options=modesLst)
             if mode:
                 st.session_state.Mode = modesLst.index(mode)
+                if st.session_state.Mode == 3:
+                    state.change_to_medical_mode()
+                else:
+                    st.session_state.medicalMode = True
 
 
         st.session_state.zoom = alt.selection_interval(bind='scales')
